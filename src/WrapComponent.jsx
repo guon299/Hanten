@@ -87,10 +87,12 @@ export default function WrapComponent(){
                             <Route path="/sub12" element={ <Sub12Component /> }/>
                         </Route>
                     </Routes>
+                    <QuickMenuComponent />
+                    <FooterComponent />
                 </HashRouter>
 
                 <GoTopComponent />
-                <QuickMenuComponent />
+
                 {
                     selector.searchModal.isSearchModal && (<SearchModalComponent />)
                 }
@@ -104,7 +106,7 @@ export default function WrapComponent(){
                     selector.hpconfirmModal.isHpConfirmModal &&
                     <HpComponent />
                 }
-                <FooterComponent />
+                
         </div>
     )
 }

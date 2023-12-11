@@ -1,6 +1,7 @@
 import React from "react";
 import './scss/Footer.scss';
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { signIn } from "../reducer/signIn";
 
 
@@ -8,25 +9,26 @@ export default  function FooterComponent(){
 
     const selector = useSelector((state)=>state);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const onClickGoSignin=(e)=>{
         e.preventDefault();
-        window.location.pathname = '/sub8'
+        navigate('/sub8');
     }
 
     const onClickGoSignup=(e)=>{
         e.preventDefault();
-        window.location.pathname = '/sub7'
+        navigate('/sub7');
     }
 
     const onClickGoNotice=(e)=>{
         e.preventDefault();
-        window.location.pathname = '/sub11Notice'
+        navigate('/sub11Notice');
     }
 
     const onClickGoAdminSignin=(e)=>{
         e.preventDefault();
-        window.location.pathname = '/sub8Admin'
+        navigate('/sub8Admin');
     }
 
     const onClickLogOut=(e)=>{
